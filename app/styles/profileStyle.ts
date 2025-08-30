@@ -1,0 +1,197 @@
+// app/styles/ProfileScreen.tsx
+import { StyleSheet, Platform } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0A0A1F',
+  },
+  header: {
+    flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 24,
+        paddingTop: Platform.OS === "android" ? 40 : 20,
+        borderBottomWidth: 1,
+        borderBottomColor: '#1A1A3A',
+        backgroundColor: '#1A1A3A',
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
+        elevation: 5,
+  },
+  iconButton: {
+    padding: 8,
+  },
+  headerTitleContainer: {
+  flex: 1,
+    alignItems: 'center',
+  },
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#FFD700',
+  },
+  editButton: {
+    padding: 8,
+  },
+  profileContent: {
+    flexGrow: 1,
+    padding: 16,
+  },
+  avatarSection: {
+    alignItems: 'center',
+    marginBottom: 24,
+  },
+  avatarContainer: {
+    position: 'relative',
+    marginBottom: 12,
+  },
+  avatar: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    borderWidth: 3,
+    borderColor: '#FFD700',
+  },
+  onlineIndicator: {
+    position: 'absolute',
+    bottom: 8,
+    right: 8,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: '#4CAF50',
+    borderWidth: 2,
+    borderColor: '#0A0A1F',
+  },
+  changePhotoButton: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    backgroundColor: '#FFD700',
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  userLevel: {
+    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#FFD700',
+  },
+  levelText: {
+    color: '#FFD700',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  infoSection: {
+    backgroundColor: 'rgba(26, 26, 46, 0.6)',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 24,
+  },
+  sectionHeader: {
+    marginBottom: 16,
+  },
+  sectionTitle: {
+    color: '#FFD700',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  sectionDivider: {
+    height: 1,
+    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+  },
+  infoItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
+  },
+  infoLabelContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  infoLabel: {
+    color: '#FFD700',
+    marginLeft: 8,
+    fontSize: 16,
+  },
+  infoValue: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  infoInput: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '500',
+    borderBottomWidth: 1,
+    borderBottomColor: '#FFD700',
+    paddingVertical: 4,
+    minWidth: 150,
+    textAlign: 'right',
+  },
+  statsSection: {
+    backgroundColor: 'rgba(26, 26, 46, 0.6)',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 24,
+  },
+  statsGrid: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  statCard: {
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+    borderRadius: 12,
+    padding: 16,
+    width: '30%',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 215, 0, 0.3)',
+  },
+  statIconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 8,
+  },
+  statValue: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  statLabel: {
+    color: '#FFD700',
+    fontSize: 12,
+  },
+  saveButton: {
+    backgroundColor: '#FFD700',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 16,
+  },
+  saveButtonText: {
+    color: '#0A0A1F',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
+
+export default styles;

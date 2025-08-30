@@ -1,0 +1,316 @@
+import { Dimensions, Platform, StatusBar, StyleSheet } from 'react-native';
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0A0A1F',
+  },
+  // Updated header to match ProfileScreen style
+  header: {
+ flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 24,
+        paddingTop: Platform.OS === "android" ? 40 : 20,
+        borderBottomWidth: 1,
+        borderBottomColor: '#1A1A3A',
+        backgroundColor: '#1A1A3A',
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
+        elevation: 5,
+  },
+  backButton: {
+    padding: 8,
+  },
+  headerTitleContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
+title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#FFD700',
+  },
+   iconButton: {
+    padding: 6,
+  },
+  headerButton: {
+    padding: 8,
+  },
+  messagesContainer: {
+    flex: 1,
+    backgroundColor: '#0A0A1F',
+  },
+  messagesContent: {
+    padding: 16,
+  },
+  messageContainer: {
+    flexDirection: 'row',
+    marginBottom: 16,
+    alignItems: 'flex-end',
+  },
+  yourMessageContainer: {
+    justifyContent: 'flex-end',
+  },
+  otherMessageContainer: {
+    justifyContent: 'flex-start',
+  },
+  avatarContainer: {
+    position: 'relative',
+    marginRight: 8,
+  },
+  yourAvatarContainer: {
+    position: 'relative',
+    marginLeft: 8,
+  },
+  avatar: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    borderWidth: 2,
+    borderColor: '#1E293B',
+  },
+  yourAvatar: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    borderWidth: 2,
+    borderColor: '#3B82F6',
+  },
+  statusBadge: {
+    position: 'absolute',
+    bottom: -2,
+    right: -2,
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    borderWidth: 2,
+    borderColor: '#1E293B',
+  },
+  messageBubble: {
+    maxWidth: '75%',
+    borderRadius: 18,
+    padding: 12,
+  },
+  yourMessage: {
+    backgroundColor: '#3B82F6',
+    borderBottomRightRadius: 4,
+  },
+  otherMessage: {
+    backgroundColor: '#334155',
+    borderBottomLeftRadius: 4,
+  },
+  senderName: {
+    color: '#E2E8F0',
+    fontSize: 12,
+    fontWeight: '500',
+    marginBottom: 4,
+  },
+  messageText: {
+    color: '#FFF',
+    fontSize: 16,
+    lineHeight: 22,
+  },
+  timestamp: {
+    color: 'rgba(255, 255, 255, 0.6)',
+    fontSize: 10,
+    alignSelf: 'flex-end',
+    marginTop: 4,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: 'rgba(26, 26, 46, 0.9)',
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255, 215, 0, 0.2)',
+  },
+  input: {
+    flex: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    color: '#FFF',
+    borderRadius: 24,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginRight: 12,
+    fontSize: 16,
+  },
+  sendButton: {
+    backgroundColor: '#FFD700',
+    borderRadius: 24,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  sendButtonDisabled: {
+    backgroundColor: 'rgba(255, 215, 0, 0.3)',
+    opacity: 0.6,
+  },
+  sendButtonText: {
+    color: '#0A0A1F',
+    fontWeight: '600',
+    fontSize: 16,
+  },
+  userInfoOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 1000,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  userInfoBackground: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+  },
+  userInfoCard: {
+    backgroundColor: 'rgba(26, 26, 46, 0.95)',
+    borderRadius: 16,
+    padding: 24,
+    width: '80%',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 215, 0, 0.3)',
+  },
+  participantsCard: {
+    backgroundColor: 'rgba(26, 26, 46, 0.95)',
+    borderRadius: 16,
+    padding: 24,
+    width: '90%',
+    maxHeight: '80%',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 215, 0, 0.3)',
+  },
+  participantsTitle: {
+    color: '#FFD700',
+    fontSize: 20,
+    fontWeight: '600',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  participantsList: {
+    maxHeight: '70%',
+  },
+  participantItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 215, 0, 0.2)',
+  },
+  participantAvatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 12,
+    borderWidth: 2,
+    borderColor: '#FFD700',
+  },
+  participantInfo: {
+    flex: 1,
+  },
+  participantName: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: '500',
+    marginBottom: 4,
+  },
+  participantDetails: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  participantStatus: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: 8,
+  },
+  participantLevel: {
+    color: '#FFD700',
+    fontSize: 14,
+  },
+  closeButton: {
+    backgroundColor: '#FFD700',
+    borderRadius: 8,
+    padding: 12,
+    marginTop: 16,
+    alignItems: 'center',
+  },
+  closeButtonText: {
+    color: '#0A0A1F',
+    fontWeight: '600',
+    fontSize: 16,
+  },
+  userInfoContent: {
+    alignItems: 'center',
+  },
+  userInfoAvatar: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    marginBottom: 12,
+    borderWidth: 3,
+    borderColor: '#FFD700',
+  },
+  userInfoStatus: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  statusIndicator: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: 6,
+  },
+  userInfoStatusText: {
+    color: '#FFD700',
+    fontSize: 14,
+  },
+  userInfoName: {
+    color: '#FFF',
+    fontSize: 20,
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  userInfoLevel: {
+    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 12,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#FFD700',
+  },
+  userInfoLevelText: {
+    color: '#FFD700',
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  userInfoButton: {
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#FFD700',
+  },
+  userInfoButtonText: {
+    color: '#FFD700',
+    fontSize: 14,
+    fontWeight: '500',
+  },
+ 
+});
+
+export default styles;
